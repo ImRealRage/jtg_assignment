@@ -47,32 +47,33 @@
     text-decoration: none;
     font-weight: 600;
     overflow: hidden;
-    border-radius: 15px;
-    transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease-in;
     z-index: 1;
   }
   
+  /* Pseudo-element for Background */
   header nav ul li a::before {
     content: "";
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0%;
-    height: 0%;
+    top: 0;
+    left: -1px;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
     background-color: #FFA500;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    transition: all 0.5s ease-in-out;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-in-out;
     z-index: -1;
   }
   
+  /* Hover State */
   header nav ul li a:hover::before {
-    width: 220%;
-    height: 500%;
+    transform: translateX(0%);
   }
   
-  header nav ul li a:hover {
-    color: #000;
+  /* Unhover State Triggered by JavaScript */
+  header nav ul li a.unhover::before {
+    transform: translateX(100%);
   }
   
   /* Hero section and other styles */
@@ -120,8 +121,8 @@
     background-color: #FFA500;
     color: #000;
     text-decoration: none;
-    font-weight: 600;
-    border-radius: 5px;
+    font-weight: 500;
+    border-radius: 6px;
     transition: background-color 0.3s ease;
   }
   
