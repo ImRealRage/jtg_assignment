@@ -25,9 +25,9 @@ header {
   padding: 20px 50px;
   background-color: rgba(255, 255, 255, 0.8); /* Translucent background */
   border-bottom: 1px solid #eee;
-  z-index: 1000; /* Ensures the header stays above other content */
-  backdrop-filter: blur(10px); /* Optional: adds a blur effect */
-  transition: all 0.3s ease-in-out; /* Smooth transition for size change */
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease-in-out;
 }
 
 header.scrolled {
@@ -39,7 +39,7 @@ header .logo img {
   height: 76px;
   width: 158px;
   object-fit: cover;
-  transition: all 0.3s ease-in-out; /* Smooth transition for logo size change */
+  transition: all 0.3s ease-in-out;
 }
 
 header.scrolled .logo img {
@@ -94,7 +94,7 @@ header nav ul li a:hover::before {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: calc(100vh - 116px); /* Adjusted for header height */
+  min-height: calc(100vh - 116px);
   padding: 0 50px;
 }
 
@@ -136,11 +136,12 @@ header nav ul li a:hover::before {
   text-decoration: none;
   font-weight: 500;
   border-radius: 6px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .btn:hover {
   background-color: #ff9000;
+  transform: translateY(-2px);
 }
 
 .hero-image img {
@@ -171,12 +172,11 @@ header nav ul li a:hover::before {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
   justify-content: center;
   max-width: 1200px;
   margin: 0 auto;
-  row-gap: 30px;
 }
 
 .project-card {
@@ -184,13 +184,14 @@ header nav ul li a:hover::before {
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   max-width: 370px;
   margin: 0 auto;
 }
 
 .project-card:hover {
   transform: translateY(-10px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .project-card img {
@@ -232,26 +233,152 @@ header nav ul li a:hover::before {
   border: 1px solid #ccc;
 }
 
-/* Media queries for responsive design */
+/* Recommendations Section */
+.recommendations {
+  padding: 50px 50px;
+  background: rgba(240, 240, 246, 1);
+  text-align: center;
+}
+
+.recommendations h2 {
+  font-size: 32px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.recommendations p {
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* Owl Carousel adjustments */
+.owl-carousel .owl-item {
+  padding: 20px 20px; /* Remove padding around each item to bring them closer */
+}
+
+.recommendation-card {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 30px;
+  text-align: left;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.recommendation-card .stars {
+  color: #FFA500;
+  font-size: 20px;
+}
+
+.recommendation-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.recommendation-card h3, .recommendation-card p {
+  margin: 0 0 10px 0;
+  flex-grow: 1; /* Ensures text area expands to fill available space */
+}
+
+.recommendation-card p {
+  overflow: hidden;
+  text-overflow: ellipsis; /* For handling long text */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.recommendation-card .profile img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+  object-fit: cover;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.profile img {
+  width: 60px !important;
+  height: 60px;
+  border-radius: 50% !important;
+  margin-right: 15px;
+  object-fit: cover;
+  display: block;
+}
+
+.profile .info h4 {
+  font-size: 18px;
+  margin-left: 10px;
+  color: #000;
+  margin-bottom: 5px;
+}
+
+.profile .info p {
+  font-size: 14px;
+  align-items: center;
+  justify-items: center;
+  margin-left: 15px;
+  color: #666;
+}
+
+/* Adjust the spacing between dots */
+.owl-dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px; /* Adjust margin for better spacing */
+  display: inline-block;
+  border-radius: 50%;
+  background: #FFA500;
+  transition: background 0.3s ease;
+}
+
+.owl-dot.active {
+  background: #FFA500;
+}
+
+
+
+/* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
   .hero {
-      flex-direction: column;
-      text-align: center;
-      min-height: auto;
-      padding: 50px 20px;
+    flex-direction: column;
+    text-align: center;
+    min-height: auto;
+    padding: 50px 20px;
   }
 
   .hero-content,
   .hero-image {
-      max-width: 100%;
+    max-width: 100%;
   }
 
   .hero-image img {
-      width: 100%;
-      height: auto;
+    width: 100%;
+    height: auto;
   }
 
   .projects-grid {
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    padding: 10px 20px;
+  }
+
+  .recommendations {
+    padding: 30px 20px;
+  }
+
+  .recommendation-card {
+    max-width: 100%;
   }
 }
