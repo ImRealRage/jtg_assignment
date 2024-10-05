@@ -30,7 +30,7 @@
     <nav>
       <ul>
         <li><a href="#hero">Home</a></li>
-        <li><a href="#">Skills</a></li>
+        <li><a href="#skills">Skills</a></li>
         <li><a href="#">Education</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#recommendations">Recommendations</a></li>
@@ -39,6 +39,7 @@
     </nav>
   </header>
 
+  <!-- Hero Section -->
   <section id="hero" class="hero">
     <div class="hero-content">
       <h1 class="">I’m <span class="name">Rayan Adlrdard</span> <br><span class="role">Front-end</span> Developer</h1>
@@ -74,6 +75,199 @@
     </span>
     </div>
   </section>
+
+    <!-- Skills Section -->
+  <div class="skills-section" id="skills">
+      <h2>Skills &amp; Languages</h2>
+      <p class="section-description">
+          Amet Minim Mollit Non Deserunt Ullamco Est Sit Aliqua Dolor<br>
+          Do Amet Sint, Velit Officia Consequat Duis Enim Velit Mollit.<br>
+          Lorem Ipsum
+      </p>
+      
+      <div class="skills-container">
+          <!-- First Row - 3 Boxes -->
+          <div class="skill-box">
+              <h3>Front End Development</h3>
+              <div class="skill">
+                  <p>Html <span>90%</span></p>
+                  <div class="progress-bar">
+                      <div class="progress" style="width: 90%;"></div>
+                  </div>
+              </div>
+              <div class="skill">
+                  <p>CSS <span>85%</span></p>
+                  <div class="progress-bar">
+                      <div class="progress" style="width: 85%;"></div>
+                  </div>
+              </div>
+              <div class="skill">
+                  <p>Js <span>80%</span></p>
+                  <div class="progress-bar">
+                      <div class="progress" style="width: 80%;"></div>
+                  </div>
+              </div>
+              <div class="skill">
+                  <p>PHP <span>75%</span></p>
+                  <div class="progress-bar">
+                      <div class="progress" style="width: 75%;"></div>
+                  </div>
+              </div>
+              <div class="skill">
+                  <p>WordPress <span>85%</span></p>
+                  <div class="progress-bar">
+                      <div class="progress" style="width: 85%;"></div>
+                  </div>
+              </div>
+          </div>
+  
+          <div class="skill-box">
+              <h3>Languages</h3>
+              <div class="skill">
+                  <p>Hindi <span>90%</span></p>
+                  <div class="progress-bar">
+                      <div class="progress" style="width: 90%;"></div>
+                  </div>
+              </div>
+              <div class="skill">
+                  <p>English <span>85%</span></p>
+                  <div class="progress-bar">
+                      <div class="progress" style="width: 85%;"></div>
+                  </div>
+              </div>
+          </div>
+  
+          <div class="skill-box">
+              <h3>Back End Development</h3>
+              <div class="skill">
+                  <p>NodeJS <span>90%</span></p>
+                  <div class="progress-bar">
+                      <div class="progress" style="width: 90%;"></div>
+                  </div>
+              </div>
+              <div class="skill">
+                  <p>SSR <span>85%</span></p>
+                  <div class="progress-bar">
+                      <div class="progress" style="width: 85%;"></div>
+                  </div>
+              </div>
+          </div>
+  
+          <!-- Second Row - 3 Boxes (Repeat similar content) -->
+          <div class="skill-box">
+              <h3>Front End Development</h3>
+              <div class="skill">
+                  <p>Html <span>90%</span></p>
+                  <div class="progress-bar">
+                      <div class="progress" style="width: 90%;"></div>
+                  </div>
+              </div>
+              <div class="skill">
+                  <p>CSS <span>85%</span></p>
+                  <div class="progress-bar">
+                      <div class="progress" style="width: 85%;"></div>
+                  </div>
+              </div>
+              <div class="skill">
+                  <p>Js <span>80%</span></p>
+                  <div class="progress-bar">
+                      <div class="progress" style="width: 80%;"></div>
+                  </div>
+              </div>
+              <div class="skill">
+                  <p>PHP <span>75%</span></p>
+                  <div class="progress-bar">
+                      <div class="progress" style="width: 75%;"></div>
+                  </div>
+              </div>
+              <div class="skill">
+                  <p>WordPress <span>85%</span></p>
+                  <div class="progress-bar">
+                      <div class="progress" style="width: 85%;"></div>
+                  </div>
+              </div>
+          </div>
+  
+          <div class="skill-box">
+              <h3>Languages</h3>
+              <div class="skill">
+                  <p>Hindi <span>90%</span></p>
+                  <div class="progress-bar">
+                      <div class="progress" style="width: 90%;"></div>
+                  </div>
+              </div>
+              <div class="skill">
+                  <p>English <span>85%</span></p>
+                  <div class="progress-bar">
+                      <div class="progress" style="width: 85%;"></div>
+                  </div>
+              </div>
+          </div>
+  
+          <div class="skill-box">
+              <h3>Back End Development</h3>
+              <div class="skill">
+                  <p>NodeJS <span>90%</span></p>
+                  <div class="progress-bar">
+                      <div class="progress" style="width: 90%;"></div>
+                  </div>
+              </div>
+              <div class="skill">
+                  <p>SSR <span>85%</span></p>
+                  <div class="progress-bar">
+                      <div class="progress" style="width: 85%;"></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  
+      <button class="add-skill-btn" id="openModalBtn">ADD SKILL</button>
+  </div>
+
+  <div class="modal" id="addSkillModal">
+    <div class="modal-content">
+        <h2>Add Skill</h2>
+
+        <!-- Domain Input -->
+        <label for="domain">Domain</label>
+        <input type="text" id="domain" placeholder="Front End Developer">
+
+        <!-- Skill Inputs -->
+        <label>Skills</label>
+        <div class="skills-inputs">
+            <div class="skill-header">
+                <p>Skill</p>
+                <p>Proficiency (%)</p>
+            </div>
+            <div class="skill-row">
+                <input type="text" class="skill-name" placeholder="">
+                <input type="number" class="skill-proficiency" placeholder="">
+            </div>
+            <div class="skill-row">
+                <input type="text" class="skill-name" placeholder="">
+                <input type="number" class="skill-proficiency" placeholder="">
+            </div>
+            <div class="skill-row">
+                <input type="text" class="skill-name" placeholder="">
+                <input type="number" class="skill-proficiency" placeholder="">
+            </div>
+            <div class="skill-row">
+                <input type="text" class="skill-name" placeholder="">
+                <input type="number" class="skill-proficiency" placeholder="">
+            </div>
+            <div class="skill-row">
+                <input type="text" class="skill-name" placeholder="">
+                <input type="number" class="skill-proficiency" placeholder="">
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="modal-buttons">
+            <button id="submitSkillBtn" class="modal-btn">ADD SKILL</button>
+            <button id="closeModalBtn" class="modal-cancel-btn">CANCEL</button>
+        </div>
+    </div>
+</div>
 
   <!-- Projects Section -->
   <section id="projects" class="projects">
@@ -440,28 +634,7 @@
   <!-- Footer Section -->
   <footer class="footer-section">
     <div class="footer-container">
-        <!-- First Section: Ratings and Glasses Logo -->
-        <div class="footer-left">
-            <div class="glasses-logo">
-                <img src="assets/images/logo.png" alt="Glasses Logo">
-            </div>
-            <div class="footer-ratings">
-                <div class="rating">
-                    <img src="assets/images/review1.jpeg" alt="Rating 1">
-                    <p>4.5/5 Rating On Lorem</p>
-                </div>
-                <div class="rating">
-                    <img src="assets/images/review2.jpeg" alt="Rating 2">
-                    <p>9/10 Rating On Ipsum</p>
-                </div>
-                <div class="rating">
-                    <img src="assets/images/review3.jpeg" alt="Rating 3">
-                    <p>4.5/5 Rating On Dorel</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Second Section: Logos -->
+        <!-- First Section: Logos -->
         <div class="footer-logos">
             <img src="assets/images/footer1.png" alt="Logo 1">
             <img src="assets/images/footer2.png" alt="Logo 2">
@@ -469,8 +642,30 @@
             <img src="assets/images/footer4.png" alt="Logo 4">
         </div>
 
-        <!-- Third Section: Links, Portfolio, Connect -->
+        <!-- Second Section: Main Content -->
         <div class="footer-content">
+            <!-- First Column: Ratings and Glasses Logo -->
+            <div class="footer-left">
+                <div class="glasses-logo">
+                    <img src="assets/images/logo.png" alt="Glasses Logo">
+                </div>
+                <div class="footer-ratings">
+                    <div class="rating">
+                        <img src="assets/images/review1.jpeg" alt="Rating 1">
+                        <p>4.5/5 Rating On Lorem</p>
+                    </div>
+                    <div class="rating">
+                        <img src="assets/images/review2.jpeg" alt="Rating 2">
+                        <p>9/10 Rating On Ipsum</p>
+                    </div>
+                    <div class="rating">
+                        <img src="assets/images/review3.jpeg" alt="Rating 3">
+                        <p>4.5/5 Rating On Dorel</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Column: Quick Links -->
             <div class="footer-links">
                 <h3>Quick Links</h3>
                 <ul>
@@ -482,6 +677,7 @@
                 </ul>
             </div>
 
+            <!-- Third Column: Portfolio -->
             <div class="footer-portfolio">
                 <h3>Portfolio</h3>
                 <ul>
@@ -493,6 +689,7 @@
                 </ul>
             </div>
 
+            <!-- Fourth Column: Connect -->
             <div class="footer-connect">
                 <h3>Connect</h3>
                 <a href="#"><img src="assets/images/linkedin.png" alt="LinkedIn"></a>
@@ -501,16 +698,17 @@
             </div>
         </div>
 
-        <!-- Footer Bottom Section -->
+        <!-- Footer Bottom -->
         <div class="footer-bottom">
             <p>© 2024 Copyright, All Rights Reserved</p>
         </div>
     </div>
-</footer>
+  </footer>
+
+
 
 
   
-
 
   <script src="script.js"></script>
 </body>

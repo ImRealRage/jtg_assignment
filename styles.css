@@ -9,6 +9,11 @@
   box-sizing: border-box;
 }
 
+::selection {
+  background-color: #0B192C; /* Change the background color to red */
+  color: #f9b621; /* Optional: change the text color when selected */
+}
+
 body {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
@@ -513,83 +518,117 @@ button[type="submit"]:hover {
 }
 
 
-/* Footer Section CSS */
-
+/* Main Footer Styling */
 .footer-section {
   background-color: #f0f0f6;
-  padding: 50px 20px;
+  padding: 50px 0;
 }
 
 .footer-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
-  flex-wrap: wrap;
+  text-align: center;
 }
 
-/* First Section: Ratings and Glasses Logo */
-.footer-left {
-  flex: 1; /* Make sure this aligns with the quick links */
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Align items to the start */
-  max-width: 250px;
-}
-
-.glasses-logo img {
-  width: 80px; /* Adjust for desired size */
-  margin-bottom: 20px;
-}
-
-.footer-ratings {
-  display: flex;
-  flex-direction: column;
-  gap: 15px; /* Space between ratings */
-  text-align: left;
-}
-
-.rating {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.rating img {
-  width: 40px; /* Adjust for desired size */
-  margin-right: 10px;
-}
-
-/* Second Section: Logos */
+/* First Section: Logos */
 .footer-logos {
-  flex: 2;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-evenly; /* Even space between logos */
   margin-bottom: 40px;
+  padding: 0 20px; /* Add padding for better spacing */
 }
 
 .footer-logos img {
-  width: 100px;
-  margin: 0 20px;
+  width: 140px; /* Adjust the size of the logos */
+  height: 144px !important;
 }
 
-/* Third Section: Links, Portfolio, Connect */
+/* Main Content Section (Four Columns) */
 .footer-content {
   display: flex;
-  justify-content: space-between;
-  width: 100%; /* Ensures it stretches across full width */
-  margin: 40px 0;
+  justify-content: space-between; /* Distribute space evenly between sections */
+  align-items: center;
+  text-align: left;
+  padding: 0 20px;
+  margin: 0 80px;
+  margin-top: 10px;
+  gap: 30px;
 }
 
+/* Individual Column Styling */
 .footer-left, .footer-links, .footer-portfolio, .footer-connect {
-  width: 25%; /* Ensure all sections take up equal space */
+  flex-basis: 23%; /* Equal width for each section */
+  padding: 0 50px 0 20px; /* Space between columns */
+  box-sizing: border-box;
+}
+
+/* Align images and ratings below each other */
+.footer-left {
+  text-align: center;
+  height: auto !important;
+}
+
+.footer-left .glasses-logo img {
+  width: 158px !important;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 40px;
+}
+
+.footer-left img {
+  height: 40px;
+  width: 91px !important;
+  border-radius: 5px;
+}
+
+
+.footer-ratings {
+  text-align: left;
+  font-size: 12px;
+  color: rgba(118, 118, 118, 1);
+  font-weight: 400;
+}
+
+.footer-ratings .rating {
+  margin-bottom: 20px; /* Spacing between each rating */
+}
+
+.footer-ratings img {
+  text-align: left;
+  display: block;
+  width: 40px; /* Adjust size of the rating icons */
+}
+
+.footer-links{
+  margin-top: 100px;
+  line-height: 1.2;
+  margin-left: 150px;
+  font-size: 16px;
+}
+
+.footer-portfolio{
+  margin-left: 50px;
+  margin-top: 100px;
+  width: 100%;
+  line-height: 1.2;
+  font-size: 16px;
+}
+
+.footer-connect{
+  margin-top: 60px;
+  margin-left: 50px;
+  line-height: 1.2;
+}
+
+.footer-left{
+  margin-top: 50px;
 }
 
 .footer-links h3, .footer-portfolio h3, .footer-connect h3 {
+  font-weight: 800;
   font-size: 18px;
-  margin-bottom: 15px;
-  font-weight: bold;
+  margin-bottom: 25px;
 }
 
 .footer-links ul, .footer-portfolio ul {
@@ -598,12 +637,13 @@ button[type="submit"]:hover {
 }
 
 .footer-links ul li, .footer-portfolio ul li {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .footer-links ul li a, .footer-portfolio ul li a {
   text-decoration: none;
-  color: #333;
+  font-weight: 400;
+  color: #000;
   font-size: 16px;
 }
 
@@ -611,9 +651,17 @@ button[type="submit"]:hover {
   color: #f9b621;
 }
 
+/* Connect Section */
 .footer-connect a img {
-  width: 40px;
-  margin: 0 10px;
+  width: 100px;
+  height: 25px;
+  margin: 2px 0;
+  display: block;
+  object-fit: cover;
+}
+
+.footer-connect a {
+  margin-right: 10px;
 }
 
 /* Footer Bottom Section */
@@ -624,6 +672,251 @@ button[type="submit"]:hover {
   color: #333;
   width: 100%;
 }
+
+
+/* Skills Section CSS */
+/* Main Section Styling */
+.skills-section {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f0f0f6; /* Light background */
+}
+
+.skills-section h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.section-description {
+  color: #888;
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+/* Skill Boxes (2 rows, 3 columns) */
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 Columns */
+  gap: 30px; /* Space between columns */
+  margin-bottom: 40px;
+}
+
+.skill-box {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  transition: transform 0.3s ease;
+}
+
+.skill-box:hover {
+  transform: scale(1.05); /* Hover effect to enlarge slightly */
+}
+
+.skill-box h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Skill Progress Bars */
+.skill {
+  margin-bottom: 20px;
+}
+
+.skill p {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.progress-bar {
+  background-color: #e0e0e0; /* Light gray background */
+  border-radius: 5px;
+  overflow: hidden;
+  height: 10px;
+  position: relative;
+}
+
+.progress {
+  background-color: #f9b621; /* Yellow color for progress */
+  height: 100%;
+  transition: width 0.5s ease-in-out;
+}
+
+/* Button Styling */
+.add-skill-btn {
+  background-color: #f9b621;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-skill-btn:hover {
+  background-color: #e0a51f; /* Darker yellow on hover */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .skills-container {
+      grid-template-columns: 1fr; /* Single column on smaller screens */
+  }
+}
+
+/* Modal styling */
+.modal {
+  display: none; /* Ensure the modal is hidden by default */
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 40%;
+    max-width: 700px;
+    height: auto; /* Allow the modal to auto-size based on content */
+    box-sizing: border-box; /* Ensure padding and border are included in the width/height */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Make the content flow vertically */
+    justify-content: space-between; /* Ensure the buttons and content are spaced properly */
+}
+/* Header styling */
+.modal-content h2 {
+    font-size: 34px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form label and input fields */
+label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    display: block;
+    color: #333;
+}
+
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f0f0f6;
+    font-size: 18px;
+}
+
+input[type="text"]::placeholder, input[type="number"]::placeholder {
+    color: #888;
+}
+
+/* Skill inputs layout */
+.skills-inputs {
+    margin-top: 10px;
+}
+
+.skill-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+.skill-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.skill-row input {
+    width: 48%; /* Adjust width for skill and proficiency inputs */
+    background-color: #f0f0f6;
+}
+
+.skill-row .skill-name {
+  flex-basis: 75%; /* Skill field takes up 70% of the row */
+}
+
+.skill-row .skill-proficiency {
+  flex-basis: 21%; /* Proficiency field takes up 30% of the row */
+}
+
+/* Action Buttons */
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.modal-btn {
+    background-color: #f9b621;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-btn:hover {
+    background-color: #e0a51f;
+}
+
+.modal-cancel-btn {
+    background-color: #ffcccc;
+    color: #ff6666;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-cancel-btn:hover {
+    background-color: #ff9999;
+}
+
+/* Prevent body scrolling when the modal is open */
+body.modal-open {
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
