@@ -352,52 +352,93 @@
   <!-- Contact Section -->
   <section id="contact" class="contact-section">
     <div class="title-div">
-      <h2 class="title1">Leave ME Your Info</h2>
-      <h3 class="title2">Contact Information</h3>
+        <h2 class="title1">Leave ME Your Info</h2>
+        <h3 class="title2">Contact Information</h3>
     </div>
     <div class="container">
-      
-      <div class="left-section">
-          <form id="contact-form" name="submit-to-google-sheet" action="https://formspree.io/f/xzzbprvo" method="POST">
-              <label for="name">Your Full Name (Required)</label>
-              <input type="text" id="name" name="name" required>
+        <div class="left-section">
+            <form id="contact-form" name="submit-to-google-sheet" action="https://formspree.io/f/xzzbprvo" method="POST">
+                <label for="name">Your Full Name (Required)</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email (Required)</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject">
+
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="7"></textarea>
+
+                <button type="submit">SEND MESSAGE</button>
+            </form>
+        </div>
+
+        <div class="right-section">
+            <div class="info-container">
+                <div class="icon-wrapper">
+                    <img src="assets/images/location.png" alt="Location Icon" class="icon">
+                </div>
+                <div class="info-block">
+                    <div class="info-row">
+                        <span class="label">Country:</span>
+                        <span class="value">Bangladesh</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">City:</span>
+                        <span class="value">Dhaka</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Street:</span>
+                        <span class="value">35 Vatara, Badda</span>
+                    </div>
+                </div>
+            </div>
+            <div class="info-container">
+                <div class="icon-wrapper">
+                    <img src="assets/images/mail.png" alt="Location Icon" class="icon">
+                </div>
+                <div class="info-block">
+                    <div class="info-row">
+                        <span class="label">Email:</span>
+                        <span class="value">youremail@gmail.com</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Skype:</span>
+                        <span class="value">@username</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Telegram:</span>
+                        <span class="value">@username</span>
+                    </div>
+                </div>
+            </div>
+            <div class="info-container">
+                <div class="icon-wrapper">
+                    <img src="assets/images/Mobile.png" alt="Location Icon" class="icon">
+                </div>
+                <div class="info-block">
+                    <div class="info-row">
+                        <span class="label">Support Services:</span>
+                        <span class="value">15369</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Office:</span>
+                        <span class="value">+58 (021)356 587 235</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Personal:</span>
+                        <span class="value">+58 (021)356 587 235</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="toast" class="toast">&#x2705; Form Submitted Successfully!</div>
+</section>
+
   
-              <label for="email">Your Email (Required)</label>
-              <input type="email" id="email" name="email" required>
-  
-              <label for="subject">Subject</label>
-              <input type="text" id="subject" name="subject">
-  
-              <label for="message">Your Message</label>
-              <textarea id="message" name="message" rows="5"></textarea>
-  
-              <button type="submit">SEND MESSAGE</button>
-          </form>
-      </div>
-  
-      <div class="right-section">
-          
-          <div class="info-block">
-              <span>Country:</span> Bangladesh<br>
-              <span>City:</span> Dhaka<br>
-              <span>Street:</span> 35 Vatara, Badda<br>
-          </div>
-  
-          <div class="info-block">
-              <span>Email:</span> Youremail@gmail.com<br>
-              <span>Skype:</span> @Yourusername<br>
-              <span>Telegram:</span> @Yourusername<br>
-          </div>
-  
-          <div class="info-block">
-              <span>Support Services:</span> 15369<br>
-              <span>Office:</span> +58 (021)356 587 235<br>
-              <span>Personal:</span> +58 (021)356 587 235<br>
-          </div>
-      </div>
-      <div id="toast" class="toast">&#x2705; Form Submitted Successfully!</div>
-  </div>
-  </section>
+
 
   <script src="script.js"></script>
 </body>

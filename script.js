@@ -88,3 +88,11 @@ function showToast() {
         toast.className = toast.className.replace("show", "");
     }, 3000); // 3 seconds duration
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Select the right section
+    var rightSection = document.querySelector('.right-section');
+
+    // Remove the top margin
+    rightSection.style.marginTop = '0px'; // Set to any value you prefer
+  });
