@@ -34,3 +34,57 @@ $(document).ready(function(){
         }
     });
 });
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        const offset = 70; // Adjust this value to match the height of your fixed nav
+
+        window.scrollTo({
+            top: targetElement.offsetTop - offset,
+            behavior: 'smooth'
+        });
+    });
+});
+
+//Print data in console
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault(); // Prevent the default form submission
+
+    // Get the form data
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    // Print data to console
+    console.log(`Name: ${name}, Email: ${email}, Message: ${message}`);
+
+});
+
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault(); // Prevent the form from actually submitting (you can remove this in production)
+
+    // Show the toast notification
+    showToast();
+
+    // Clear the form (optional)
+    document.getElementById('contact-form').reset();
+
+    // You can also add your code here to send the form data
+});
+
+function showToast() {
+    // Get the toast element
+    const toast = document.getElementById('toast');
+
+    // Add the "show" class to display the toast
+    toast.className = "toast show";
+
+    // After 3 seconds, remove the show class to hide the toast
+    setTimeout(function() {
+        toast.className = toast.className.replace("show", "");
+    }, 3000); // 3 seconds duration
+}

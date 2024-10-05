@@ -29,17 +29,17 @@
     </div>
     <nav>
       <ul>
-        <li><a href="#">Home</a></li>
+        <li><a href="#hero">Home</a></li>
         <li><a href="#">Skills</a></li>
         <li><a href="#">Education</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#">Recommendations</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#recommendations">Recommendations</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="hero">
+  <section id="hero" class="hero">
     <div class="hero-content">
       <h1 class="">I’m <span class="name">Rayan Adlrdard</span> <br><span class="role">Front-end</span> Developer</h1>
       <p>Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Et, Volutpat Feugiat Placerat Lobortis. Natoque Rutrum Semper Sed Suspendisse Nunc Lectus.</p>
@@ -76,7 +76,7 @@
   </section>
 
   <!-- Projects Section -->
-  <section class="projects">
+  <section id="projects" class="projects">
     <div class="projects-container">
         <h2>Projects</h2>
         <p>Amet Minim Mollit Non Deserunt Ullamco Est Sit Aliqua Dolor Do Amet Sint. Velit Officia <br /> Consequat Duis Enim Velit Mollit. Lorem Ipsum</p>
@@ -185,7 +185,7 @@
   </section>
 
   <!-- Recommendations Section -->
-  <section class="recommendations">
+  <section id="recommendations" class="recommendations">
     <div class="recommendations-container">
       <h2>Recommendations</h2>
       <p>Amet Minim Mollit Non Deserunt Ullamco Est Sit Aliqua Dolor Do Amet Sint. Velit Officia Consequat Duis Enim Velit Mollit. Lorem Ipsum</p>
@@ -350,57 +350,53 @@
   </section>
 
   <!-- Contact Section -->
-  <section class="contact-section">
-    <div class="container">
-      <div class="form-container">
-        <h2>Leave ME Your Info</h2>
-        <form action="#" method="POST" id="contactForm">
-          <label for="name">Your Full Name ( Required )</label>
-          <input type="text" id="name" name="name" required>
-  
-          <label for="email">Your Email ( Required )</label>
-          <input type="email" id="email" name="email" required>
-  
-          <label for="subject">Subject</label>
-          <input type="text" id="subject" name="subject">
-  
-          <label for="message">Your Message</label>
-          <textarea id="message" name="message" rows="4"></textarea>
-  
-          <button type="submit" class="btn">Send Message</button>
-        </form>
-      </div>
-  
-      <div class="contact-info">
-        <h2>Contact Information</h2>
-        <div class="info-block">
-          <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
-          <p>
-            Country: Bangladesh<br>
-            City: Dhaka<br>
-            Street: 35 Vhatara, Badda
-          </p>
-        </div>
-  
-        <div class="info-block">
-          <div class="icon"><i class="fas fa-envelope"></i></div>
-          <p>
-            Email: YourEmail@gmail.com<br>
-            Skype: @Yourusername<br>
-            Telegram: @Yourusername
-          </p>
-        </div>
-  
-        <div class="info-block">
-          <div class="icon"><i class="fas fa-phone-alt"></i></div>
-          <p>
-            Support Services: 15369<br>
-            Office: +58 (021)356 587 235<br>
-            Personal: +58 (021)356 587 235
-          </p>
-        </div>
-      </div>
+  <section id="contact" class="contact-section">
+    <div class="title-div">
+      <h2 class="title1">Leave ME Your Info</h2>
+      <h3 class="title2">Contact Information</h3>
     </div>
+    <div class="container">
+      
+      <div class="left-section">
+          <form id="contact-form" name="submit-to-google-sheet" action="https://formspree.io/f/xzzbprvo" method="POST">
+              <label for="name">Your Full Name (Required)</label>
+              <input type="text" id="name" name="name" required>
+  
+              <label for="email">Your Email (Required)</label>
+              <input type="email" id="email" name="email" required>
+  
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject">
+  
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" rows="5"></textarea>
+  
+              <button type="submit">SEND MESSAGE</button>
+          </form>
+      </div>
+  
+      <div class="right-section">
+          
+          <div class="info-block">
+              <span>Country:</span> Bangladesh<br>
+              <span>City:</span> Dhaka<br>
+              <span>Street:</span> 35 Vatara, Badda<br>
+          </div>
+  
+          <div class="info-block">
+              <span>Email:</span> Youremail@gmail.com<br>
+              <span>Skype:</span> @Yourusername<br>
+              <span>Telegram:</span> @Yourusername<br>
+          </div>
+  
+          <div class="info-block">
+              <span>Support Services:</span> 15369<br>
+              <span>Office:</span> +58 (021)356 587 235<br>
+              <span>Personal:</span> +58 (021)356 587 235<br>
+          </div>
+      </div>
+      <div id="toast" class="toast">&#x2705; Form Submitted Successfully!</div>
+  </div>
   </section>
 
   <script src="script.js"></script>
