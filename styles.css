@@ -513,6 +513,119 @@ button[type="submit"]:hover {
 }
 
 
+/* Footer Section CSS */
+
+.footer-section {
+  background-color: #f0f0f6;
+  padding: 50px 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+/* First Section: Ratings and Glasses Logo */
+.footer-left {
+  flex: 1; /* Make sure this aligns with the quick links */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the start */
+  max-width: 250px;
+}
+
+.glasses-logo img {
+  width: 80px; /* Adjust for desired size */
+  margin-bottom: 20px;
+}
+
+.footer-ratings {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Space between ratings */
+  text-align: left;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.rating img {
+  width: 40px; /* Adjust for desired size */
+  margin-right: 10px;
+}
+
+/* Second Section: Logos */
+.footer-logos {
+  flex: 2;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 40px;
+}
+
+.footer-logos img {
+  width: 100px;
+  margin: 0 20px;
+}
+
+/* Third Section: Links, Portfolio, Connect */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; /* Ensures it stretches across full width */
+  margin: 40px 0;
+}
+
+.footer-left, .footer-links, .footer-portfolio, .footer-connect {
+  width: 25%; /* Ensure all sections take up equal space */
+}
+
+.footer-links h3, .footer-portfolio h3, .footer-connect h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.footer-links ul, .footer-portfolio ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li, .footer-portfolio ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a, .footer-portfolio ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+
+.footer-links ul li a:hover, .footer-portfolio ul li a:hover {
+  color: #f9b621;
+}
+
+.footer-connect a img {
+  width: 40px;
+  margin: 0 10px;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+  width: 100%;
+}
+
+
 
 
 
