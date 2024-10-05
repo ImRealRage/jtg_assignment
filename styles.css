@@ -696,6 +696,7 @@ button[type="submit"]:hover {
 
 /* Skill Boxes (2 rows, 3 columns) */
 .skills-container {
+  padding: 50px;
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 Columns */
   gap: 30px; /* Space between columns */
